@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {BlogComponent} from "./blog/blog.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {PagesComponent} from "./pages.component";
+import {BlogCategoryComponent} from "./blog-category/blog-category.component";
 
 const routes: Routes = [
   {
@@ -11,7 +12,9 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'blog' },
       {path: 'blog', component: BlogComponent},
-      {path: 'blog/:id', component: BlogComponent},
+      {path: 'blog/:category', component: BlogComponent},
+      {path: 'blog/:category/:slug', component: BlogCategoryComponent},
+      {path: 'profile/:slug', component: ProfileComponent},
       {path: 'profile', component: ProfileComponent},
     ]
   },

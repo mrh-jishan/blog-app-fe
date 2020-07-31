@@ -22,6 +22,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
+import { BlogCardComponent } from './home/blog-card/blog-card.component';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.co
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    BlogCardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.co
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatChipsModule,
 
   ],
   providers: [],

@@ -11,6 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import { BlogCategoryComponent } from './blog-category/blog-category.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatIconModule} from "@angular/material/icon";
     PagesComponent,
     ProfileComponent,
     BlogComponent,
-    NavCarouselComponent
+    NavCarouselComponent,
+    BlogCategoryComponent
   ],
   imports: [
     CommonModule,

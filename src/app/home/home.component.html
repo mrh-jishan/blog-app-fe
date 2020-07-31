@@ -1,9 +1,35 @@
-<section fxLayout="column" fxFlexAlign="stretch">
-  <div fxFlexAlign="center">
-    <p>Welcome to the Material Angular OwnerAccount Application</p>
+<div fxLayout="column" fxLayoutGap="5px">
+  <div fxFlex="100" fxLayout="column" fxLayoutGap="15px">
+    <app-blog-card></app-blog-card>
   </div>
 
-  <p>In this application we are going to work with:</p>
+  <div fxLayout="row wrap" fxLayoutGap="5px">
+    <div fxFlex="calc(70% -5px)" fxLayout="column" fxLayoutGap="5px">
+      <app-blog-card *ngFor="let item of blogItems"></app-blog-card>
+    </div>
+    <div fxFlex="calc(30%-5px)" fxLayout="column" fxLayoutGap="5px">
+      <mat-card>
+        <mat-card-subtitle>Blog Category</mat-card-subtitle>
+        <mat-card-content>
+          <mat-chip-list>
+            <mat-chip *ngFor="let folder of folders" color="primary" selected>{{folder.name}}</mat-chip>
+          </mat-chip-list>
+        </mat-card-content>
+      </mat-card>
 
+      <mat-card>
+        <mat-card-subtitle>Recent Post</mat-card-subtitle>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let folder of folders">
+              <mat-icon mat-list-icon>folder</mat-icon>
+              <div mat-line>{{folder.name}}</div>
+              <div mat-line> {{folder.updated | date}} </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
 
-</section>
+  </div>
+</div>
