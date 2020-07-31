@@ -8,6 +8,13 @@
             fxLayoutGap="20px">
         <h2>Register</h2>
         <mat-form-field>
+          <mat-label>Display name</mat-label>
+          <input matInput placeholder="full-name" formControlName="username" required/>
+          <mat-error>
+            Please provide a valid name
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
           <mat-label>Email</mat-label>
           <input matInput placeholder="Email" formControlName="username" required/>
           <mat-error>
@@ -21,7 +28,7 @@
             Please provide a valid password
           </mat-error>
         </mat-form-field>
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary">Register</button>
         <h4>Already have an account? <a mat-button color="primary" routerLink="/auth/login">Login</a> </h4>
       </form>
     </mat-card-content>
