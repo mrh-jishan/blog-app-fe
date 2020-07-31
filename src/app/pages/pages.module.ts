@@ -5,17 +5,29 @@ import { PagesRoutingModule } from './pages-routing.module';
 import {PagesComponent} from "./pages.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {BlogComponent} from "./blog/blog.component";
+import { NavCarouselComponent } from './components/nav-carousel/nav-carousel.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatButtonModule} from "@angular/material/button";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
   declarations: [
     PagesComponent,
     ProfileComponent,
-    BlogComponent
+    BlogComponent,
+    NavCarouselComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatIconModule,
   ]
 })
 export class PagesModule { }

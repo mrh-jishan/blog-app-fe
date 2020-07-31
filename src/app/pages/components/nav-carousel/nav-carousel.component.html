@@ -1,0 +1,27 @@
+<div fxLayout="row wrap">
+  <div fxFlex="40px">
+    <button mat-icon-button color="primary" (click)="scrollLeft()">
+      <mat-icon class="carousel-icon">keyboard_arrow_left</mat-icon>
+    </button>
+  </div>
+
+  <mat-card #widgetsContent
+            fxFlex
+            fxLayoutAlign="start center"
+            fxLayoutGap="10px"
+            class="carousel p-0">
+    <div *ngFor="let item of navItems">
+      <a mat-button [routerLink]="['/pages/blog',item]">{{item}}</a>
+    </div>
+  </mat-card>
+
+  <div fxFlex="40px">
+    <button mat-icon-button color="primary" (click)="scrollRight()">
+      <mat-icon class="carousel-icon">keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+
+  <div fxFlex="100%">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.carousel {
+  overflow: auto;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-icon {
+    font-size: 30px;
+
+  }
+}
