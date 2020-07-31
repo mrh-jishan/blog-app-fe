@@ -20,6 +20,10 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     BlogComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatMenuModule,
     MatListModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
