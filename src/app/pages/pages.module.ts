@@ -12,6 +12,8 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import { BlogCategoryComponent } from './blog-category/blog-category.component';
+import { NewBlogComponent } from './new-blog/new-blog.component';
+import { MarkdownEditorComponent } from './components/markdown-editor/markdown-editor.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { BlogCategoryComponent } from './blog-category/blog-category.component';
     ProfileComponent,
     BlogComponent,
     NavCarouselComponent,
-    BlogCategoryComponent
+    BlogCategoryComponent,
+    NewBlogComponent,
+    MarkdownEditorComponent
   ],
   imports: [
     CommonModule,

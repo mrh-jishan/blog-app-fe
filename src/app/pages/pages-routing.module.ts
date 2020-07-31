@@ -4,6 +4,7 @@ import {BlogComponent} from "./blog/blog.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {PagesComponent} from "./pages.component";
 import {BlogCategoryComponent} from "./blog-category/blog-category.component";
+import {NewBlogComponent} from "./new-blog/new-blog.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'blog' },
       {path: 'blog', component: BlogComponent},
+      {path: 'new-blog', component: NewBlogComponent},
       {path: 'blog/:category', component: BlogCategoryComponent},
       {path: 'blog/:category/:slug', component: BlogComponent},
       {path: 'profile/:slug', component: ProfileComponent},
