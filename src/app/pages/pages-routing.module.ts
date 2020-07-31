@@ -12,8 +12,8 @@ const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'blog' },
       {path: 'blog', component: BlogComponent},
-      {path: 'blog/:category', component: BlogComponent},
-      {path: 'blog/:category/:slug', component: BlogCategoryComponent},
+      {path: 'blog/:category', component: BlogCategoryComponent},
+      {path: 'blog/:category/:slug', component: BlogComponent},
       {path: 'profile/:slug', component: ProfileComponent},
       {path: 'profile', component: ProfileComponent},
     ]

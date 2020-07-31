@@ -5,7 +5,7 @@
 
   <div fxLayout="row wrap" fxLayoutGap="5px">
     <div fxFlex="calc(70% -5px)" fxLayout="column" fxLayoutGap="5px">
-      <app-blog-card *ngFor="let item of blogItems"></app-blog-card>
+      <app-blog-card *ngFor="let blog of blogItems" [routerLink]="['/pages/blog', blog.category, blog.uid]"></app-blog-card>
     </div>
     <div fxFlex="calc(30%-5px)" fxLayout="column" fxLayoutGap="5px">
       <mat-card>

@@ -7,7 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  blogItems = Array(10)
+  blogItems = [
+    {
+      uid: "uid",
+      title: "Title of the blog",
+      subtitle: "subtitle of the blog",
+      image: "image url",
+      post: "post is awesome",
+      category: "category",
+      createdBy: "Md Robin",
+      createdAt: "04/30/3033"
+    }
+  ]
   folders = [
     {
       name: 'Photos',
