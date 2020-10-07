@@ -22,8 +22,9 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
-import { BlogCardComponent } from './home/blog-card/blog-card.component';
+import {BlogCardComponent} from './home/blog-card/blog-card.component';
 import {MatChipsModule} from "@angular/material/chips";
+import {HIGHLIGHT_OPTIONS, HighlightOptions} from "ngx-highlightjs";
 
 @NgModule({
   declarations: [
@@ -52,10 +53,17 @@ import {MatChipsModule} from "@angular/material/chips";
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatChipsModule,
+    MatChipsModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        fullLibraryLoader: () => import('highlight.js')
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
